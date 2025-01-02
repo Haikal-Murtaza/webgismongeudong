@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/map', function () {
-    return view('map');
+Route::get('/proxy', function () {
+    $url = request()->get('url');
+    $response = Http::get($url);
+    return response($response->body(), $response->status(), $response->headers());
 });

@@ -12,7 +12,7 @@ var map = new ol.Map({
 
 // Layer Dasar
 var osmLayer = new ol.layer.Tile({
-    title: 'OpenStreetMap',
+    title: 'Open Street Map',
     source: new ol.source.OSM(),
     visible: true,
 });
